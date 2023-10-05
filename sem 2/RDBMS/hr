@@ -1,0 +1,55 @@
+create table tbl_student(
+	studid int not null,
+	studname varchar(50),
+	stud_class varchar(15),
+	divison varchar(5),
+	unit_test1 float,
+	unit_test2 float,
+	quiz1 float,
+	quiz2 float,
+	internal float,
+	self_creation float,
+	cie float
+);	
+
+create procedure insertion(id int,name varchar(50),sclass varchar(15),divis varchar(15),unit1 float,unit2 float,qui1 float,qui2 float,internal1 float,sc float,ci float)
+begin 
+	insert into tbl_student values(id,name,sclass,divis,unit1,unit2,qui1,qui2,sc,internal1,ci);
+end#
+
+call insertion(1,'Naishal','2 semster','B',12,13,6,7,4,null,null)#
+call insertion(2,'preet','2 semster','B',13,14,7,7,6,null,null)#
+call insertion(3,'Harsh','3 semster','C',12,11,4,3,7,null,null)#
+call insertion(4,'Karan','1 semster','C',14,15,9,8,7,null,null)#
+call insertion(5,'Mahesh','1 semster','D',8,4,3,3,6,null,null)#
+
+create function f1(id int)
+returns float
+begin
+	declare result,unit1,unit2,qui1,qui2,sc,internalZ,ci float;
+	declare unit,quiz,inter1,sec,cies float;
+	select unit_test1,unit_test2,quiz1,quiz2,Internal1,self_creation,cie into unit1,unit2,qui1,qui2,internalZ,sc,ci from tbl_student where studid=id;	
+	set unit=(unit1+unit2*10)/30;
+	set quiz=(qui1+qui2*5)/20;
+	set sec=sc*10/8;
+	set inter1=internalZ*15/60;
+	set result=unit+quiz+inter1+sec+ci/500*100;
+	
+end#
+
+create procedure cie(id int,cies float)
+begin
+	update tbl_student set cie=cies where studid=id;
+	select cie from tbl_student where studid=id;
+end#
+
+
+create procedure s1(id int)
+begin 
+	declare total,result,unit1,unit2,qui1,qui2,sc,ci float;
+	
+	select unit_test1+unit_test2,quiz1,quiz2,self_creation,cie into unit1,unit2,qui1,qui2,sc,ci from tbl_student where studid=id;
+	set total=unit1+unit2+qui1+qui2+sc+ci/60*100;
+	update tbl_student set Internal1=total where studid=id;
+end#
+

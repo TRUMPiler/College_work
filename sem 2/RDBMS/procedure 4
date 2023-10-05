@@ -1,0 +1,55 @@
+Domestic consumer can calculate the bill using the different charges for
+different unit given in the below table Mr. Akash Bhadra wants to pay the
+electricity bill, help him to find how much payment he has to pay, and
+after payment the details should be maintain in BillData.
+[Must use concept of Switch case]
+Criteria which are to be considered while calculation of bill:
+UNIT
+CHARGES
+0-100
+200 fixed.
+100-200 200+ Extra unit*3.
+200-300 200+Extra unit*4.
+300-400 200+Extra unit*5.
+Consider Table:
+Customer (Cust_id,Cust_Name,Unit_Consumed,Total_Bill_Amt)
+BillData(bid,cust_id,TotalBillAmt,DateofPayment)
+[Note: Direct insertion in BillData is not allowed, Use Procedure for
+calculation]
+
+
+
+create table Customer 
+(
+Cust_id int,
+Cust_Name varchar(50),
+Unit_Consumed int,
+Total_Bill_Amt decimal(10,2)
+);#
+
+create procedure Inser_emp(In id int,name varchar(50),unit int) 
+begin
+insert into Customer(Cust_id,Cust_Name,Unit_Consumed) values(id,name,unit);
+end#	
+
+call Inser_emp(101,'Harsh',200)#
+call Inser_emp(102,'Mr Akash Bhadra',340)#
+call Inser_emp(103,'Ms HEli Mehta',500)#
+call Inser_emp(104,'Mr Preet Raval',600)#
+
+
+
+
+create table BillData
+(
+bid int,
+cust_id int,
+TotalBillAmt decimal(10,2),
+DateofPayment date
+)#
+
+create Procedure billcal()
+begin
+	select * from 
+end#
+

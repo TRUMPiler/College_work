@@ -1,0 +1,29 @@
+drop procedure F1#
+create procedure F1()
+Begin
+	declare i int default 1;
+	declare output varchar(100) default ' ';
+		while(i<=10)do 
+			
+			set output=concat(output,i,',');
+			set i=i+1;				
+		End while;
+		select output;
+End;
+			 
+
+drop procedure F1#
+create procedure F1()
+Begin
+	declare i int default 1;
+	declare output varchar(100) default ' ';
+	declare 		
+		while(i<=10)do 
+			
+			set output=concat(output,i,',');
+			set i=i+1;				
+		End while;
+		select output;
+End;
+			 //new line parameter
+

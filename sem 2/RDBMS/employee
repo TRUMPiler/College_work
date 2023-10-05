@@ -1,0 +1,86 @@
+delimiter #
+create table EMPLOYEE(
+eid int not null primary key,
+ename varchar(50),
+e_contactno bigint,
+city char(50),
+gender char(10),
+salary decimal(10,2),
+doj date
+);#
+
+create procedure SP_emp_insert(IN id int, name varchar(50), contactno int, ecity varchar(20), egender varchar(20), esalary decimal(10,2), edoj date)
+begin 
+	insert into EMPLOYEE (eid,ename,e_contactno,city,gender,salary,doj) values(id,name,contactno,ecity,egender,esalary,edoj);
+end;
+#
+
+call SP_emp_insert(101,'heli',98979695,'surat','male','58000.00','2018-06-07')#
+call SP_emp_insert(102,'mahesh',98979696,'bardoli','male','28000.00','2019-08-16')#
+call SP_emp_insert(103,'ashta',98979697,'bardoli','female','48000.00','2019-09-21')#
+call SP_emp_insert(104,'madhavi',98979698,'surat','male','38000.00','2018-12-23')#
+call SP_emp_insert(105,'ram',98979699,'bardoli','male','68000.00','2020-09-18')#
+
+create procedure Q1()
+begin 
+	select ename from EMPLOYEE where salary > 25000;	
+end#
+
+call Q1#
+
+create procedure Q2()
+begin 
+	select count(eid) from EMPLOYEE;	
+end#
+call Q2#
+
+create procedure Q3()
+begin 
+	select ename,city from EMPLOYEE where doj between '2018-06-01' AND '2020-7-20';	
+end#
+call Q3#
+
+create procedure Q4(k int)
+begin 
+	select * from EMPLOYEE where eid=k;
+end#
+call Q4(103)#
+
+
+create procedure Q5(k int, l char(50))
+begin 
+	select ename,eid,city,salary from EMPLOYEE where eid=k AND ename=l;
+end#
+call Q5(102,'mahesh')#
+
+create procedure Q6(k int)
+begin 
+	delete from EMPLOYEE where eid=k;
+end#
+call Q6(101)#
+
+create procedure Q7(k int)
+begin 
+	update EMPLOYEE set e_contactno=98972134 where eid=k;
+end#
+
+call Q7(105)#
+
+create Procedure Q8(k int)
+begin 
+	update EMPLOYEE set salary=salary+2000 where eid=k;
+end#
+
+
+
+
+
+
+
+
+
+
+
+
+
+

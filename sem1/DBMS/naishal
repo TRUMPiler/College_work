@@ -1,0 +1,65 @@
+CREATE TABLE Tbl_compram
+(
+Ram_name char(50),
+Ram_speed char(10),
+Ram_price int,
+Ram_stock smallint,
+Ram_sold smallint
+);
+
+CREATE TABLE Tbl_ssd
+(
+SSD_NAME char(50),
+SSD_space char(10),
+SSD_price int,
+SSD_stock smallint,
+SSD_sold smallint
+);
+
+CREATE TABLE Tbl_graphicard
+(
+graphicard_name char(50),
+graphicard_speed char(10),
+graphicard_price bigint,
+graphicard_stock smallint,
+graphicard_sold smallint
+);
+
+CREATE TABLE Tbl_cabinet
+(
+cabinet_name char(50),
+cabinet_type char(10),
+cabinet_price bigint,
+cabinet_stock smallint,
+cabinet_sold smallint
+);
+
+CREATE TABLE Tbl_monitor
+(
+monitor_name char(50),
+monitor_refreshrate char(10),
+monitor_price bigint,
+monitor_stock smallint,
+monitor_sold smallint
+);
+
+CREATE TABLE Tbl_motherboard
+(
+motherboard_name char(50),
+motherboard_price bigint,
+motherboard_stock smallint,
+motherboard_sold smallint
+);
+
+CREATE TABLE Tbl_processor
+(
+processor_name char(50),
+processor_cores smallint,
+processor_price int,
+processor_stock smallint,
+processor_sold smallint
+);
+
+
+
+

@@ -1,0 +1,21 @@
+update Tbl_swiggy set customer_ID=21011324
+where customer_name="manish";
+
+insert into Tbl_swiggy value
+(
+29098743,
+'naishal',
+78763455,
+'201-jajhada apartment12,piplod main road,piplod',
+'SURAT',
+'GUJRAT',
+'INDIA',
+'GOOD FOOD GOOD SERVICES',
+'INDIAN,MEXICAN',
+'PENUT BUTTER'
+);
+
+
+
+
+

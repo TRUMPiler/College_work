@@ -1,0 +1,49 @@
+CREATE TABLE Tbl_studID
+(
+e_no bigint NOT NULL,
+NAME char(50) NOT NULL,
+emailid char(70) NOT NULL,
+address char(200) NOT NULL,
+phoneno bigint NOT NULL,
+mothersname char(50) NOT NULL,
+fathersname char(50) NOT NULL,
+dob date NOT NULL,
+city char(10) NOT NULL,
+state char(20) NOT NULL,
+country char(20) NOT NULL,
+pincode bigint NOT NULL
+);
+
+INSERT INTO Tbl_studID value
+(
+2021018739,
+'NAISHAL DOSHI',
+'cjesus69133@gmail.com',
+'701 pratistha apartment pragati nagar',
+9326163059,
+'DIMPLR M DOSHI',
+'MANISH N DOSHI',
+'2003-06-13',
+'SURAT',
+'GUJRAT',
+'INDIA',
+395007
+);
+
+INSERT INTO Tbl_studID value
+(
+2021304542,
+'sjsjsjjs',
+'sjsjsj@gmail.com',
+'sjsjsjs optic aparts piplod',
+836748292,
+'sjsjpapa',
+'sjsjmama',
+'2003-05-12',
+'SURAT',
+'GUJRAT',
+'INDIA',
+395002
+);
+
+

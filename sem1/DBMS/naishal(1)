@@ -1,0 +1,135 @@
+CREATE TABLE Tbl_compram
+(
+Ram_name char(50) NOT NULL,
+Ram_speed char(10) NOT NULL,
+Ram_price int NOT NULL,
+Ram_stock smallint NOT NULL,
+Ram_sold smallint NOT NULL
+);
+
+CREATE TABLE Tbl_ssd
+(
+SSD_NAME char(50) NOT NULL,
+SSD_space char(10) NOT NULL,
+SSD_price int NOT NULL,
+SSD_stock smallint NOT NULL,
+SSD_sold smallint NOT NULL
+);
+
+CREATE TABLE Tbl_graphicard
+(
+graphicard_name char(50) NOT NULL,
+graphicard_speed char(10) NOT NULL,
+graphicard_price bigint NOT NULL,
+graphicard_stock smallint NOT NULL,
+graphicard_sold smallint NOT NULL
+);
+
+CREATE TABLE Tbl_cabinet
+(
+cabinet_name char(50) NOT NULL,
+cabinet_type char(10) NOT NULL,
+cabinet_price bigint NOT NULL,
+cabinet_stock smallint NOT NULL,
+cabinet_sold smallint NOT NULL
+);
+
+CREATE TABLE Tbl_monitor
+(
+monitor_name char(50) NOT NULL,
+monitor_refreshrate char(10) NOT NULL,
+monitor_price bigint NOT NULL,
+monitor_stock smallint NOT NULL,
+monitor_sold smallint NOT NULL
+);
+
+CREATE TABLE Tbl_motherboard
+(
+motherboard_name char(50) NOT NULL,
+motherboard_price bigint NOT NULL,
+motherboard_stock smallint NOT NULL,
+motherboard_sold smallint NOT NULL
+);
+
+CREATE TABLE Tbl_processor
+(
+processor_name char(50) NOT NULL,
+processor_cores smallint NOT NULL,
+processor_price int NOT NULL,
+processor_stock smallint NOT NULL,
+processor_sold smallint NOT NULL
+);
+
+
+INSERT INTO Tbl_compram value
+(
+'tyron668',
+'8gb',
+1200,
+500,
+34
+);
+
+INSERT INTO Tbl_compram value
+(
+'ttla6000',
+'4gb',
+6870,
+500,
+356
+);
+
+INSERT INTO Tbl_compram value 
+(
+'samsung rgb',
+'6gb',
+5007,
+678,
+455
+);
+
+INSERT INTO Tbl_graphicard value
+(
+'Geforece gtx3090',
+'4gb',
+58000,
+650,
+538
+);
+
+INSERT INTO Tbl_graphicard value
+(
+'Geforece gtx3080',
+'3gb',
+56500,
+421,
+76
+);
+
+INSERT INTO Tbl_graphicard value
+(
+'AMD RYZEN 6800 HIGH PERFORMANCE',
+'6gb',
+78940,
+300,
+78
+);
+
+INSERT INTO Tbl_graphicard value
+(
+'AMD RYZEN 3400 semi-perfromance',
+'2gb',
+12000,
+300,
+78
+);
+
+INSERT INTO Tbl_monitor value
+(
+'DELL 600 4K HD',
+'120HZ',
+48000,
+200,
+173
+);
+

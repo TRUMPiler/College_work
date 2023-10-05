@@ -1,0 +1,17 @@
+create table Author_id 
+(
+Author_Id bigint primary key not null, 
+Author_Name char(50) not null,
+City char(20) not null, 
+Contact_Number bigint Not null
+);
+
+create table Book
+(
+Book_Id bigint not null,
+Book_title char(50) not null,
+Book_Quantity int not null,
+Book_Price decimal(10,2),
+Author_Id bigint not null,
+foreign key(Author_Id) references Author_id(Author_id)
+);

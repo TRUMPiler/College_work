@@ -1,0 +1,62 @@
+create table Suppliers
+(
+supplier_id bigint primary key not null, 
+supplier_name char(50) not null,
+supplier_address char(250) not null,
+supplier_contactname bigint not null
+);
+
+create table Product
+(
+product_code bigint, 
+product_name char(50),
+product_description char(50),
+supplier_id bigint Not null,
+FOREIGN KEY (supplier_id) REFERENCES Suppliers(supplier_id)
+);
+
+insert into Suppliers value
+(
+17181910,
+'Microsoft',
+'semithon heights,4th street, citylight ,new york-10021',
++14023
+);
+
+
+insert into Suppliers value
+(
+17181929,
+'Bing',
+'semithon heights,4th street, citylight ,new york-10021',
++15054
+);
+
+
+
+insert into Product VALUE
+(
+565445,
+'MICROSOFT ASN',
+'SEARCH ENGINE FOR MICROSOFT EDGE',
+17181929
+);
+
+
+insert into Product VALUE
+(
+565450,
+'WINDOWS',
+'OPTIMISED OPERATING SOFTWARE FOR COMPUTER',
+17181910
+);
+
+
+
+
+
+
+SELECT *
+   FROM Product 
+     INNER JOIN Suppliers
+        ON Suppliers.supplier_id = Product.supplier_id; 

@@ -1,0 +1,12 @@
+create table TrainMaster 
+(
+Train_ID bigint primary key, 
+Trainname char(50), 
+Source char(60), 
+Destination char(20), 
+Scheduled_days char(60) not null, 
+Sdate date,
+Enddate date
+);
+
+Passenger (Passenger_ID ,Train_ID,Travel_date , PName, City)

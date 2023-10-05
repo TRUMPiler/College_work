@@ -1,0 +1,29 @@
+CREATE TABLE Tbl_swiggy
+(
+customer_ID bigint,
+customer_name char(50) NOT NULL,
+customer_phoneno bigint NOT NULL,
+customer_adress char(250) NOT NULL,
+city char(20) NOT NULL,
+state char(25) NOT NULL,
+country char(50) NOT NULL,
+customer_REVIEW char(78) NOT NULL,
+customer_prefence char(250) NOT NULL,
+customer_allergy char(200) NOT NULL
+);
+
+insert into Tbl_swiggy value
+(
+34345679,
+'manish',
+90989796,
+'201 B-2 PRATISTHA APARTMENT,PIPLOD MAIN ROAD, PIPLOD',
+'SURAT',
+'GUJRAT',
+'INDIA',
+'GOOD FOOD BUT REACH LATE',
+'MEXICAN,ITALIAN,INDIAN(PUNJABI)',
+'NONE'
+);
+
+

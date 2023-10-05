@@ -1,0 +1,260 @@
+create table Product_Master
+(
+product_no bigint,
+product_name char(50),
+purchase_date date,
+product_price decimal(7,2),
+product_quantity bigint,
+distributor_name char(70)
+);
+
+create table SALESMAN 
+(
+SALEMAN_NO bigint, 
+SNAME char(100), 
+ADDRESS1 char(200), 
+ADDRESS2 char(200), 
+CITY CHAR(60),
+PINCODE BIGINT, 
+STATE CHAR(20)
+);
+
+
+
+create table PROJECT
+(
+PROJECT_ID char(80),
+PROJECT_NAME char(90)
+);
+
+insert into PROJECT value
+(
+'BR0783833',
+'TIGER MANGO DISTRIBUTION'
+);
+
+ insert into Product_Master value
+ (
+ 21332510,
+PARLEG BISCUIT&apos;,
+'2021-03-12',
+ 897.00,
+ 3224,
+'KRISHNAN DISTRIBUTION'
+ );
+
+
+ insert into Product_Master value
+ (
+ 21332511,
+ 'CADBURY OREO',
+    '2021-04-21',
+  434.00,
+    3224,
+   'PREET DISTRIBUTION'
+    );
+
+
+ insert into Product_Master value
+  (
+  21332517,
+  'TIGER CHOCO BISCUIT',
+   '2021-04-21',
+    434.00,
+    3224,
+   'JAI AMBE DISTRIBUTION'
+    );
+
+
+ insert into Product_Master value
+  (
+   21332514,
+ 'BRITANA ORANGE BISCUIT',
+  '2021-05-30',
+   376.00,
+   3224,
+  'JAI AMBE DISTRIBUTION'
+   );
+
+insert into Product_Master value
+ (
+    -> 21332521,
+    -> 'BRITANA MANGO BISCUIT',
+    -> '2021-05-31',
+    -> 373.00,
+    -> 3225,
+    -> 'JAI AMBE DISTRIBUTION'
+    -> );
+ 
+mysql> insert into SALESMAN value
+    -> (
+    -> 98765423,
+    -> 'HARISH MASADE',
+    -> '201-HAISHBADA APARTMENT,PIPLOD MAIN ROAD, PIPLOD',
+    -> '202-HAISHBADA APARTMENT,PIPLOD MAIN ROAD, PIPLOD',
+    -> 'SURAT',
+    -> 395007,
+    -> 'GUJRAT'
+    -> );
+
+mysql> create table SALESMAN 
+    -> (
+    -> SALEMAN_NO bigint, 
+    -> SNAME char(100), 
+    -> ADDRESS1 char(200), 
+    -> ADDRESS2 char(200), 
+    -> CITY CHAR(60),
+    -> PINCODE BIGINT, 
+    -> STATE CHAR(20)
+    -> );
+
+
+
+     insert into SALESMAN
+     98765423,
+     'HARISH MASADE',
+     '201-HAISHBADA APARTMENT,PIPLOD MAIN ROAD, PIPLOD',
+     '202-HAISHBADA APARTMENT,PIPLOD MAIN ROAD, PIPLOD',
+    -> 'SURAT',
+    -> 395007,
+    -> 'GUJRAT'
+    -> );
+
+
+mysql> insert into SALESMAN value
+    -> (
+    -> 98765423,
+    -> 'PREET RAWAL',
+    -> '201-GARREB APARTMENT,PIPLOD MAIN ROAD, PIPLOD',
+    -> '201-GAREEB APARTMENT,PIPLOD MAIN ROAD, PIPLOD',
+    -> 'SURAT',
+    -> 395007,
+    -> 'GUJRAT'
+    -> );
+
+
+ insert into SALESMAN value
+    -> (
+    -> 98765422,
+    -> 'DEVLA SOLANKI',
+    -> '602-RASTA APARTMENT,PIPLOD MAIN ROAD, PIPLOD',
+    -> '201-RASTA APARTMENT,PIPLOD MAIN ROAD, PIPLOD',
+    -> 'SURAT',
+    -> 395009,
+    -> 'GUJRAT'
+    -> );
+
+
+mysql> insert into SALESMAN value
+    -> (
+    -> 98765422,
+    -> 'GIDBA JIWAL',
+    -> '601-TARA APARTMENT,PIPLOD MAIN ROAD, PIPLOD',
+    -> '708-TARA APARTMENT,PIPLOD MAIN ROAD, PIPLOD',
+    -> 'SURAT',
+    -> 395007,
+    -> 'GUJRAT'
+    -> );
+
+insert into SALESMAN value
+    -> (
+    -> 92765422,
+    -> 'JAMAL MASUUD',
+    -> '604-DIDLAD APARTMENT,PIPLOD MAIN ROAD, PIPLOD',
+    -> '203-DIDLAD APARTMENT,PIPLOD MAIN ROAD, PIPLOD',
+    -> 'SURAT',
+    -> 395007,
+    -> 'GUJRAT'
+    -> );
+
+
+
+mysql> insert into PROJECT value                                                    -> (
+    -> 09078382,
+    -> 'PARLEG DISTRIBUTION'
+    -> );
+
+
+mysql> insert into PROJECT value
+    -> (
+    -> 090783833,
+    -> 'CADBURY OREO'
+    -> );
+
+
+mysql> insert into PROJECT value
+    -> (
+    -> 020783834,
+    -> 'TIGER DISTRIBUTION'
+    -> );
+
+
+mysql> 
+mysql> insert into PROJECT value
+    -> (
+    -> 'BR0783833',
+    -> 'TIGER ORANGE DISTRIBUTION'
+    -> );
+
+
+ insert into PROJECT value
+ (
+'BR0783833',
+ 'TIGER MANGO DISTRIBUTION'
+  );
+
+
+show tables;
++--------------------+
+| Tables_in_DB_MSCIT |
++--------------------+
+| PROJECT            |
+| Product_Master     |
+| SALESMAN           |
+| Tbl_cabinet        |
+| Tbl_compram        |
+| Tbl_graphicard     |
+| Tbl_monitor        |
+| Tbl_motherboard    |
+| Tbl_processor      |
+| Tbl_ssd            |
+| Tbl_studID         |
++--------------------+
+
+
+ SELECT * FROM Product_Master; select * from SALESMAN; SELECT * FROM PROJECT;
++------------+------------------------+---------------+---------------+------------------+-----------------------+
+| product_no | product_name           | purchase_date | product_price | product_quantity | distributor_name      |
++------------+------------------------+---------------+---------------+------------------+-----------------------+
+|   21332510 | PARLEG BISCUIT         | 2021-03-12    |        897.00 |             3224 | KRISHNAN DISTRIBUTION |
+|   21332511 | CADBURY OREO           | 2021-04-21    |        434.00 |             3224 | PREET DISTRIBUTION    |
+|   21332517 | TIGER CHOCO BISCUIT    | 2021-04-21    |        434.00 |             3224 | JAI AMBE DISTRIBUTION |
+|   21332514 | BRITANA ORANGE BISCUIT | 2021-05-30    |        376.00 |             3224 | JAI AMBE DISTRIBUTION |
+|   21332521 | BRITANA MANGO BISCUIT  | 2021-05-31    |        373.00 |             3225 | JAI AMBE DISTRIBUTION |
++------------+------------------------+---------------+---------------+------------------+-----------------------+
+5 rows in set (0.00 sec)
+
++------------+---------------+--------------------------------------------------+--------------------------------------------------+-------+---------+--------+
+| SALEMAN_NO | SNAME         | ADDRESS1                                         | ADDRESS2                                         | CITY  | PINCODE | STATE  |
++------------+---------------+--------------------------------------------------+--------------------------------------------------+-------+---------+--------+
+|   98765423 | HARISH MASADE | 201-HAISHBADA APARTMENT,PIPLOD MAIN ROAD, PIPLOD | 202-HAISHBADA APARTMENT,PIPLOD MAIN ROAD, PIPLOD | SURAT |  395007 | GUJRAT |
+|   98165424 | PREET RAWAL   | 201-GARREB APARTMENT,PIPLOD MAIN ROAD, PIPLOD    | 201-GAREEB APARTMENT,PIPLOD MAIN ROAD, PIPLOD    | SURAT |  395007 | GUJRAT |
+|   98165425 | DEVLA SOLANKI | 602-RASTA APARTMENT,PIPLOD MAIN ROAD, PIPLOD     | 201-RASTA APARTMENT,PIPLOD MAIN ROAD, PIPLOD     | SURAT |  395009 | GUJRAT |
+|   98765422 | GIDBA JIWAL   | 601-TARA APARTMENT,PIPLOD MAIN ROAD, PIPLOD      | 708-TARA APARTMENT,PIPLOD MAIN ROAD, PIPLOD      | SURAT |  395007 | GUJRAT |
+|   98165426 | JAMAL MASUUD  | 604-DIDLAD APARTMENT,PIPLOD MAIN ROAD, PIPLOD    | 203-DIDLAD APARTMENT,PIPLOD MAIN ROAD, PIPLOD    | SURAT |  395007 | GUJRAT |
++------------+---------------+--------------------------------------------------+--------------------------------------------------+-------+---------+--------+
+5 rows in set (0.00 sec)
+
++------------+---------------------------+
+| PROJECT_ID | PROJECT_NAME              |
++------------+---------------------------+
+| 9078382    | PARLEG DISTRIBUTION       |
+| 90783833   | CADBURY OREO              |
+| 20783834   | TIGER DISTRIBUTION        |
+| BR0783833  | TIGER ORANGE DISTRIBUTION |
+| BR0783833  | TIGER MANGO DISTRIBUTION  |
++------------+---------------------------+
+5 rows in set (0.00 sec)
+
+
+
